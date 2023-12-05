@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-class AUV:
+class UV:
     def __init__(self):
         self.center = None
         self.radius = None
@@ -56,14 +56,14 @@ class AUV:
 
 
 
-auv = AUV()
+uv = UV()
 
 video_capture = cv2.VideoCapture(0)
 
 while True:
     ret, frame = video_capture.read()
 
-    frame_with_circle = auv.detect_circle(frame)
+    frame_with_circle = uv.detect_circle(frame)
 
     cv2.imshow('Frame', frame_with_circle)
 
